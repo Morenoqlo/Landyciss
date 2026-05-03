@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LANDYCISS | Coleccion</title>
+    <meta
+      name="description"
+      content="Galeria detallada de piezas y mockups LANDYCISS."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="collection-page">
+    <header class="site-header collection-header" aria-label="Navegacion principal">
+      <a class="brand-mark" href="./index.html#top" aria-label="LANDYCISS inicio">
+        <img src="./assets/symbol-black-tight.png" alt="" />
+        <span aria-hidden="true">LANDYCISS</span>
+      </a>
+      <nav class="nav-links" aria-label="Secciones">
+        <a href="./index.html#mockups">Mockups</a>
+        <a href="./index.html#motion">Video</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="collection-hero" aria-labelledby="collectionTitle">
+        <div class="collection-hero-copy">
+          <p class="section-kicker" id="collectionKicker">Coleccion</p>
+          <h1 id="collectionTitle">LANDYCISS</h1>
+          <p id="collectionDescription"></p>
+          <div class="collection-actions">
+            <a class="button primary" href="./index.html#mockups">Volver</a>
+            <button class="button ghost" id="openFirstPiece" type="button">Ver galeria</button>
+          </div>
+        </div>
+        <figure class="collection-board-main">
+          <img id="collectionBoardImage" src="" alt="" />
+        </figure>
+      </section>
+
+      <section class="collection-pieces-section" aria-labelledby="piecesTitle">
+        <div class="section-head compact-head">
+          <div>
+            <div class="section-kicker" id="collectionCount">Piezas</div>
+            <h2 id="piecesTitle">Detalle de mockups</h2>
+          </div>
+          <p class="mobile-hint">Piezas recortadas para revisar el sistema visual en detalle.</p>
+        </div>
+        <div class="pieces-grid collection-pieces-grid" id="piecesGrid"></div>
+      </section>
+    </main>
+
+    <div class="lightbox" id="lightbox" aria-modal="true" role="dialog" aria-label="Galeria de mockups" hidden>
+      <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Cerrar galeria">Cerrar</button>
+      <button class="lightbox-nav prev" id="lightboxPrev" type="button" aria-label="Imagen anterior">Anterior</button>
+      <figure class="lightbox-stage">
+        <img id="lightboxImage" src="" alt="" />
+        <figcaption>
+          <strong id="lightboxTitle"></strong>
+          <span id="lightboxCounter"></span>
+        </figcaption>
+      </figure>
+      <button class="lightbox-nav next" id="lightboxNext" type="button" aria-label="Imagen siguiente">Siguiente</button>
+    </div>
+
+    <script src="./collections-data.js"></script>
+    <script src="./collection.js"></script>
+  </body>
+</html>

@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LANDYCISS | Performance Brand Showcase</title>
+    <meta
+      name="description"
+      content="Landing de presentacion para logo, mockups y video de marca LANDYCISS."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="Navegacion principal">
+      <a class="brand-mark" href="#top" aria-label="LANDYCISS inicio">
+        <img src="./assets/symbol-black-tight.png" alt="" />
+        <span aria-hidden="true">LANDYCISS</span>
+      </a>
+      <nav class="nav-links" aria-label="Secciones">
+        <a href="#identity">Identidad</a>
+        <a href="#mockups">Mockups</a>
+        <a href="#motion">Video</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-bg" aria-hidden="true">
+          <img src="./assets/logo-white.png" alt="" />
+        </div>
+        <div class="hero-content">
+          <p class="eyebrow">Performance / Discipline / Legacy</p>
+          <div class="hero-video-panel" aria-label="Video de entrada LANDYCISS">
+            <video
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              poster="./mockups/board-performance-02.png"
+              src="./video/landyciss-hero-reveal.mp4"
+            ></video>
+          </div>
+          <div class="hero-lockup">
+            <h1 id="hero-title">LANDYCISS</h1>
+          </div>
+          <p class="hero-copy">
+            Ropa deportiva con caracter urbano, presencia premium y un sistema visual
+            listo para vivir en prendas, accesorios, campanas y movimiento.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#mockups">Ver mockups</a>
+            <a class="button ghost" href="#motion">Ver video</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="identity-section" id="identity" aria-labelledby="identity-title">
+        <div class="section-kicker">01 / Identidad</div>
+        <div class="identity-grid">
+          <div class="identity-copy">
+            <h2 id="identity-title">Logo de alto contraste, pensado para impacto inmediato.</h2>
+            <p>
+              La corona, el ave y la simetria construyen una presencia de equipo,
+              autoridad y pertenencia. La landing usa una direccion visual cinematica:
+              negro profundo, blanco tactil, concreto frio y destellos de metal.
+            </p>
+          </div>
+          <div class="logo-specimen" aria-label="Versiones del logo">
+            <article class="specimen specimen-dark">
+              <img src="./assets/logo-white.png" alt="Version blanca del logo LANDYCISS" />
+              <span>Version blanca</span>
+            </article>
+            <article class="specimen specimen-light">
+              <img src="./assets/logo-black.png" alt="Version negra del logo LANDYCISS" />
+              <span>Version negra</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="brand-strip" aria-label="Aplicaciones sugeridas">
+        <div class="strip-item">Uniforme</div>
+        <div class="strip-item">Streetwear</div>
+        <div class="strip-item">Social</div>
+        <div class="strip-item">Merch</div>
+        <div class="strip-item">Motion</div>
+      </section>
+
+      <section class="mockup-section" id="mockups" aria-labelledby="mockups-title">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">02 / Mockups</div>
+            <h2 id="mockups-title">Galeria general de aplicaciones.</h2>
+          </div>
+          <p class="section-note">
+            Piezas individuales, mockups y detalles de marca en una sola vista limpia.
+          </p>
+        </div>
+
+        <div class="general-gallery" id="generalGallery" aria-label="Galeria general de mockups LANDYCISS"></div>
+      </section>
+
+      <section class="motion-section" id="motion" aria-labelledby="motion-title">
+        <div class="motion-copy">
+          <div class="section-kicker">03 / Video</div>
+          <h2 id="motion-title">Un espacio cinematico para mostrar el logo en movimiento.</h2>
+          <p>
+            El video queda como pieza central de presentacion: una entrada rapida
+            para mostrar como respira el logo en un ambiente premium.
+          </p>
+        </div>
+        <div class="video-frame">
+          <video
+            id="brandVideo"
+            controls
+            playsinline
+            preload="metadata"
+            poster="./mockups/board-performance-02.png"
+            src="./video/landyciss-brand-motion.mp4"
+          ></video>
+          <div class="video-placeholder" id="videoPlaceholder" hidden>
+            <img src="./assets/logo-white.png" alt="" />
+            <span>Logo motion preview</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing-section" aria-labelledby="closing-title">
+        <p class="section-kicker">04 / Presentacion</p>
+        <h2 id="closing-title">Una marca lista para verse grande, nitida y memorable.</h2>
+        <p>
+          Esta base ya queda cargada con una galeria general de piezas individuales,
+          mockups premium y video final para presentar con claridad.
+        </p>
+      </section>
+    </main>
+
+    <div class="lightbox" id="lightbox" aria-modal="true" role="dialog" aria-label="Galeria de mockups" hidden>
+      <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Cerrar galeria">Cerrar</button>
+      <button class="lightbox-nav prev" id="lightboxPrev" type="button" aria-label="Imagen anterior">Anterior</button>
+      <figure class="lightbox-stage">
+        <img id="lightboxImage" src="" alt="" />
+        <figcaption>
+          <strong id="lightboxTitle"></strong>
+          <span id="lightboxCounter"></span>
+        </figcaption>
+      </figure>
+      <button class="lightbox-nav next" id="lightboxNext" type="button" aria-label="Imagen siguiente">Siguiente</button>
+    </div>
+
+    <script src="./collections-data.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
